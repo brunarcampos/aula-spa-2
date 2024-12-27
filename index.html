@@ -131,7 +131,7 @@
         <div class="container__incricao--form-input">
           <input placeholder="Digite seu email" aria-label="email" id="inscricao" type="email">
 
-          <button type="submit">
+          <button type="submit" onclick="alternarModal('ver-modal-inscrito', true)">
             Inscrever
           </button>
         </div>
@@ -146,7 +146,7 @@
             </h2>
             <img class="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="" />
             <!-- Botão para fechar a janela modal 'ver-modal-inscrito -->
-            <button class="btn-fechar" tabindex="0" aria-label="Fechar formulário enviado">
+            <button class="btn-fechar" onclick="alternarModal('ver-modal-inscrito', false)" tabindex="0" aria-label="Fechar formulário enviado">
               Fechar
             </button>
           </div>
@@ -171,7 +171,7 @@
       <p class="infos">
         Reserve seu horário, tire dúvidas e proponha sugestões!
       </p>
-      <button class="btn-contato" aria-label="Clique para Entrar em contato">
+      <button class="btn-contato" onclick="alternarModal('ver-modal-contato', true)" aria-label="Clique para Entrar em contato">
         Entrar em contato
       </button>
     </div>
@@ -186,7 +186,7 @@
             Preencha seus dados:
           </h2>
           <!-- Botão para fechar a janela modal 'ver-modal-contato' -->
-          <button class="cabecalho-modal-fechar" aria-label="Botão para fechar o formulário" tabindex="0">
+          <button class="cabecalho-modal-fechar" onclick="alternarModal('ver-modal-contato', false)" aria-label="Botão para fechar o formulário" tabindex="0">
             <span aria-hidden="true">×</span>
           </button>
         </div>
@@ -237,7 +237,8 @@
 
         <div class="rodape-modal">
           <!-- Botão para fechar a janela modal 'ver-modal-contato' -->
-          <button class="btn-enviar" tabindex="0">
+          <button class="btn-enviar" onclick="alternarModal('ver-modal-contato', false), alternarModal('ver-modal-enviado', true)"
+           tabindex="0">
             Enviar
           </button>
         </div>
@@ -254,7 +255,8 @@
           </h2>
           <img class="cabecalho-icone-modal-enviado" src="./assets/icon-enviado.png" alt="" />
           <!-- Botão para fechar a janela modal 'ver-modal-enviado' contato-->
-          <button class="btn-fechar" tabindex="0" aria-label="Fechar formulário enviado">
+          <button class="btn-fechar" onclick="alternarModal('ver-modal-enviado', false)" tabindex="0" 
+          aria-label="Fechar formulário enviado">
             Fechar
           </button>
         </div>
